@@ -2,11 +2,14 @@ import './App.scss';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Repo from './components/Repo/Repo';
+import getDecrementedDate from './utils/getDecrementedDate';
 
+// decrement days from today to get the date before 30 days from today
+const dcrementedDate = getDecrementedDate(30);
 function App() {
   const [repos, setRepos] = useState([]);
   useEffect(() => {
-    axios.get('https://api.github.com/search/repositories?q=created:>2017-10-22&sort=stars&order=desc&page=1')
+    axios.get(`https://api.github.com/search/repositories?q=created:>${dcrementedDate}&sort=stars&order=desc&page=1`)
       .then((res) => {
         setRepos([...res.data.items]);
       });
