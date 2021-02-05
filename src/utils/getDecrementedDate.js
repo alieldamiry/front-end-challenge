@@ -1,3 +1,5 @@
+// decrement days from today to and return the date before 30 days from today
+
 const getDecrementedDate = (days) => {
   let decrementedDate = new Date();
   decrementedDate.setDate(decrementedDate.getDate() - days);

@@ -1,3 +1,5 @@
+// return difference in days between today date and created date
+
 const useDiffDays = (date) => {
   const date1 = new Date(date);
   const date2 = new Date();
