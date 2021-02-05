@@ -4,7 +4,7 @@ import axios from 'axios';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import Repo from './components/Repo/Repo';
 import getDecrementedDate from './utils/getDecrementedDate';
-import Spinner from './components/Repo/Spinner/Spinner';
+import Spinner from './components/Spinner/Spinner';
 
 // decrement days from today to get the date before 30 days from today
 const dcrementedDate = getDecrementedDate(30);
