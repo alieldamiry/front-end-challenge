@@ -1,8 +1,11 @@
-import './App.css';
+import './App.scss';
+import Repo from './components/Repo/Repo';
 
 function App() {
   return (
-    <div className="App" />
+    <div className="container">
+      <Repo />
+    </div>
   );
 }
 
