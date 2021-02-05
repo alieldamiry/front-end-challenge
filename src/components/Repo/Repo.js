@@ -1,30 +1,31 @@
 import './Repo.scss';
 
-const Repo = () => {
+const Repo = ({ name, description, repoUrl, stars, issues, username, avatar }) => {
   return (
     <div className="repo">
       <div className="repo__avatar">
         <img
           className="repo__avatar"
-          src="https://avatars.githubusercontent.com/u/1241807?v=4"
-          alt="avatar"
+          src={avatar}
+          alt={`${username} avatar`}
         />
       </div>
       <div className="repo__info">
-        <h3 className="repo__name">Repo Name</h3>
+        <a href={repoUrl}>
+          <h3 className="repo__name">{name}</h3>
+        </a>
         <p className="repo__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quis ut eum quia,
-          officiis
+          {description}
         </p>
         <div className="repo__footer">
           <span className="repo__footer__box-info">
-            Stars: 11
+            Stars: {stars}
           </span>
           <span className="repo__footer__box-info">
-            Issues: 11
+            Issues: {issues}
           </span>
           <span>
-            Submitted 10 days ago by someone
+            Submitted 10 days ago by {username}
           </span>
         </div>
       </div>

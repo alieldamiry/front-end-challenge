@@ -12,10 +12,20 @@ function App() {
       });
   }, []);
 
-  console.log(repos);
   return (
     <div className="container">
-      <Repo />
+      {repos.map((repo) => (
+        <Repo
+          key={repo.id}
+          name={repo.full_name}
+          description={repo.description}
+          repoUrl={repo.html_url}
+          stars={repo.stargazers_count}
+          issues={repo.open_issues_count}
+          username={repo.owner.login}
+          avatar={repo.owner.avatar_url}
+        />
+      ))}
     </div>
   );
 }
