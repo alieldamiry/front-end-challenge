@@ -1,6 +1,10 @@
 import './Repo.scss';
+import getDiffDays from '../../utils/getDiffDays';
 
-const Repo = ({ name, description, repoUrl, stars, issues, username, avatar }) => {
+const Repo = ({ name, description, repoUrl, stars, issues, username, avatar, created }) => {
+  // get difference in days between today date and created date
+  const days = getDiffDays(created);
+
   return (
     <div className="repo">
       <div className="repo__avatar">
@@ -25,7 +29,7 @@ const Repo = ({ name, description, repoUrl, stars, issues, username, avatar }) =
             Issues: {issues}
           </span>
           <span>
-            Submitted 10 days ago by {username}
+            Submitted {days} days ago by {username}
           </span>
         </div>
       </div>

@@ -20,6 +20,7 @@ function App() {
           name={repo.full_name}
           description={repo.description}
           repoUrl={repo.html_url}
+          created={repo.created_at}
           stars={repo.stargazers_count}
           issues={repo.open_issues_count}
           username={repo.owner.login}
