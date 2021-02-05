@@ -2,6 +2,16 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## About
+
+This project is developed using React library.
+In this project I used:
+* React Hooks for managing the state and lifecycles of the functional components. 
+* Scss for styling. for class names I followed the BEM naming convention.
+* Axios for dealing with requests
+* react-infinite-scroll-component library for dealing with pagination on scroll, npm url: https://www.npmjs.com/package/react-infinite-scroll-component.
+
+
 ## Available Scripts
 
 In the project directory, you can run:
